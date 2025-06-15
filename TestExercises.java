@@ -9,24 +9,26 @@ public class TestExercises {
 
     int[][] intArray = new int[10][10];
     String [] stringsArray = new String[] {"WV", "tt", "bmw", "volga"};
+    String word = "I have test";
 
+    String str1 = "";
+    String str2 = "marko1";
     int[] arr = {1,2,3,4};
 
-        System.out.println(findIndexArr(arr, 1));
+        System.out.println(findIndexElementArr(arr, 2));
 
     }
 
-    static int findIndexArr(int[] arr, int indexTarget) {
+    static int findIndexElementArr(int[] arr, int el) {
 
-        int len = arr.length;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == el) {
+                return i;
+            }
+        }
 
-        return IntStream.range(0, len)
-                .filter(e -> indexTarget == arr[e])
-                .findFirst()
-                .orElse(-1);
-
+        return -1;
     }
-
 
 
 }
