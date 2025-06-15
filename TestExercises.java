@@ -13,23 +13,15 @@ public class TestExercises {
 
     String str1 = "";
     String str2 = "marko1";
-    int[] arr = {1,2,3,4};
+    int[] arr = {10,2,3,4, 10};
 
-        System.out.println(findIndexElementArr(arr, 2));
+        System.out.println(arrContains10As1stAndLastElement(arr));
 
     }
 
-    static int findIndexElementArr(int[] arr, int el) {
-
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] == el) {
-                return i;
-            }
-        }
-
-        return -1;
+    static boolean arrContains10As1stAndLastElement(int[] arr) {
+        return (arr[0] == 10 && arr[arr.length - 1] == 10);
     }
-
 
 }
 
